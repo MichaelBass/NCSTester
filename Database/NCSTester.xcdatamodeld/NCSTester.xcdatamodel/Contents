@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12E55" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="CDAssesement" representedClassName="CDAssesement" syncable="YES">
+        <attribute name="creationDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="orderNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="tests" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="CDTest" inverseName="assesement" inverseEntity="CDTest" syncable="YES"/>
+        <relationship name="user" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="CDUser" inverseName="assesement" inverseEntity="CDUser" syncable="YES"/>
+    </entity>
+    <entity name="CDItem" representedClassName="CDItem" syncable="YES">
+        <attribute name="formItemOID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="itemDataOID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="itemResponseOID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="position" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="response" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="responseTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timeStamp" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="ncsTest" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="CDTest" inverseName="ncsItem" inverseEntity="CDTest" syncable="YES"/>
+    </entity>
+    <entity name="CDTest" representedClassName="CDTest" syncable="YES">
+        <attribute name="completed" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="dateFinished" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="dateStarted" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="error" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="lastItemID" optional="YES" attributeType="String" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="orderNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="score" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="selectedForUpload" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="testID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uploaded" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="userID" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="assesement" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="CDAssesement" inverseName="tests" inverseEntity="CDAssesement" syncable="YES"/>
+        <relationship name="ncsItem" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="CDItem" inverseName="ncsTest" inverseEntity="CDItem" syncable="YES"/>
+    </entity>
+    <entity name="CDUser" representedClassName="CDUser" syncable="YES">
+        <attribute name="dob" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="educationLevel" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="language" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ncsID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uuID" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="assesement" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="CDAssesement" inverseName="user" inverseEntity="CDAssesement" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="CDAssesement" positionX="160" positionY="192" width="128" height="120"/>
+        <element name="CDItem" positionX="160" positionY="192" width="128" height="165"/>
+        <element name="CDTest" positionX="160" positionY="192" width="128" height="255"/>
+        <element name="CDUser" positionX="160" positionY="192" width="128" height="135"/>
+    </elements>
+</model>

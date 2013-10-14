@@ -1,0 +1,53 @@
+<Criterias>
+  
+<Thresholds>
+<Threshold ID="1" Description="First sequence of practice items (Shape)" Value="3" />
+<Threshold ID="2" Description="Second sequence of parctice items (Color)" Value="3" />
+<Threshold ID="3" Description="Preswitch" Value="4" />
+<Threshold ID="4" Description="Postswitch" Value="4" />
+</Thresholds>
+
+  
+<Range ID="1" Min="3" Max="7">
+<Criteria Section="1" />
+<Criteria Section="2" />
+<Criteria Section="3" />
+<Criteria Section="4" Threshold="1" />
+<Criteria Section="5" Threshold="1" />
+<Criteria Section="6" Threshold="1" />
+<Criteria Section="7" Threshold="1" />
+<Criteria Section="8" Threshold="1" />  
+<Criteria Section="9"  Gate="1" />
+<Criteria Section="10" Threshold="2" />
+<Criteria Section="11" Threshold="2" />
+<Criteria Section="12" Threshold="2" />
+<Criteria Section="13" Threshold="2" />
+<Criteria Section="14" Threshold="2" />
+<Criteria Section="15" Gate="2" />
+<Criteria Section="16" Threshold="3" IsItem="true" />
+<Criteria Section="17" Gate="3" />
+<Criteria Section="18" Threshold="4" IsItem="true" />
+<Criteria Section="19" Gate="4" />
+<Criteria Section="21" />  
+</Range>
+
+<Range ID="2" Min="8" Max="120">
+  <Criteria Section="1" />
+  <Criteria Section="2" />
+  <Criteria Section="3" />
+  <Criteria Section="4" Threshold="1" />
+  <Criteria Section="5" Threshold="1" />
+  <Criteria Section="6" Threshold="1" />
+  <Criteria Section="7" Threshold="1" />
+  <Criteria Section="8" Threshold="1" />
+  <Criteria Section="9"  Gate="1" />
+  <Criteria Section="10" Threshold="2" />
+  <Criteria Section="11" Threshold="2" />
+  <Criteria Section="12" Threshold="2" />
+  <Criteria Section="13" Threshold="2" />
+  <Criteria Section="14" Threshold="2" />
+  <Criteria Section="20" Gate="2" />
+  <Criteria Section="21" />
+</Range>
+
+</Criterias>

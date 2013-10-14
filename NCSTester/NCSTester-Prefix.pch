@@ -1,0 +1,29 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+
+// ELEMENTS
+#define NCS_ELEMENT_TYPE_STEM   @"Stem"
+#define NCS_ELEMENT_TYPE_RESP   @"ResponseSet"
+#define NCS_ELEMENT_TYPE_LBL    @"Label"
+#define NCS_ELEMENT_TYPE_CTX    @"Context"
+#define NCS_ELEMENT_TYPE_TXT    @"Txt"
+
+// DCCS TEST DEFINES
+#define NCS_RESOURCE_TEXT       @"txt"
+#define NCS_RESOURCE_IMAGE      @"img"
+#define NCS_RESOURCE_SOUND      @"snd"
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
