@@ -538,6 +538,7 @@
 
     
  // Load the final order Item List
+    NSLog(@"sorted keys count: %d", sortedKeys.count);
 for(int i = 0; i < sortedKeys.count; i++){
     
     NSMutableArray *myFinalArray = [self.sectionItems objectForKey: [sortedKeys objectAtIndex:i] ];

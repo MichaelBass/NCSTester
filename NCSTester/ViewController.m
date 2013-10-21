@@ -41,6 +41,8 @@
 
 - (void)testViewDidFinish:(UIView *)view
 {
+    NSLog(@"test view did finish: %@", view);
+    
     // set index to correct test
     if (self.testIndex < self.tests.count){
         self.testIndex +=1;
@@ -53,7 +55,7 @@
 }
 
 
-- (void) executeTestCompleted{
+- (void) executeTestCompleted {
 
      // [[NCSCoreDataManager sharedInstance] markTestCompleted:self.test];
     [self testViewDidFinish:nil];
@@ -122,6 +124,8 @@
      [self mergeSavedDataIntoItemList];
      myView.engine.ItemList = myView.itemList;
 
+    NSLog(@"items: %d", myView.itemList.count);
+    
     [self setNextItem];
     
     /*
@@ -174,6 +178,8 @@
 {
     [super viewDidLoad];
     
+    NSLog(@"view did load...");
+    
     self.tests = [[NSMutableArray alloc] initWithCapacity:1];
     
     // self
@@ -196,13 +202,11 @@
     
     cn = [NSLayoutConstraint constraintWithItem:self.contentView attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0.0];
     [self.view addConstraint:cn];
-
-   
-    [self initWithData];
     
+    [self initWithMetaData:_data[@"tests"] userid:_data[@"user"] dob:_data[@"dob"] education:_data[@"education"] language:_data[@"language"]];
 }
 
-- (void) initWithMetaData: (NSArray*)instruments userid:(NSString*)userid dob:(NSString*)sDOB education:(NSString*)sEducation language:(NSString*)sLanguage {
+- (void) initWithMetaData:(NSArray*)instruments userid:(NSString*)userid dob:(NSString*)sDOB education:(NSString*)sEducation language:(NSString*)sLanguage {
 
     self.user = [[NCSCoreDataManager sharedInstance] createUser:userid dob:sDOB education:sEducation language:sLanguage];
 
@@ -217,17 +221,27 @@
 
 }
 
+- (id)initWithData:(NSDictionary *)data
+{
+    self = [super init];
+    if (self) {
+        _data = data;
+        NSLog(@"tests: %@", _data[@"tests"]);
+        NSLog(@"dob: %@", _data[@"dob"]);
+    }
+    return self;
+}
+
+/*
 - (void) initWithData {
 
     self.user = [[NCSCoreDataManager sharedInstance] getUserByID:@"0F2092CD-1EA1-4321-A145-0CFCFF63A61D"];
-    /*
      [self createTestWithName:@"DCCS"];
      [self createTestWithName:@"VocabPractice"];
      [self createTestWithName:@"Flanker"];
      [self createTestWithName:@"Vocab"];
      [self createTestWithName:@"MainView"];
      [self createTestWithName:@"BaseView"];
-     */
     
     NSArray* instruments = [NSArray arrayWithObjects:@"BaseView", @"VocabPractice", @"Vocab", nil];
     self.assessment = [[NCSCoreDataManager sharedInstance] addAssesement:instruments user:self.user ];
@@ -239,6 +253,7 @@
     
     [self loadTestAtIndex:0];
 }
+*/
 
 - (void)createTestWithName:(NSString*)name
 {
@@ -275,6 +290,8 @@
 
 - (void)loadTestAtIndex:(NSInteger)index
 {
+    NSLog(@"load test at index: %d", index);
+    
     BaseView *fromView;
     BaseView *toView;
     

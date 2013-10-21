@@ -11,7 +11,10 @@
 #import "BaseView.h"
 
 @interface ViewController : UIViewController<TestViewDelegate>
-- (void) initWithData ;
+
+@property (strong, nonatomic) NSDictionary *data;
+
+- (id)initWithData:(NSDictionary *)data;
 
 - (void)initWithMetaData: (NSArray*)instruments userid:(NSString*)userid dob:(NSString*)sDOB education:(NSString*)sEducation language:(NSString*)sLanguage;
 
