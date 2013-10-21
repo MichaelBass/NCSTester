@@ -17,6 +17,7 @@
 
 // DB Add
 - (CDAssesement*)addAssesement:(NSArray*)instruments user:(CDUser*)user;
+- (CDUser*) createUser:(NSString*)sID dob:(NSString*)sDOB education:(NSString*)sEducation language:(NSString*)sLanguage;
 - (BOOL)addUser:(NSString*)sID dob:(NSString*)sDOB education:(NSString*)sEducation language:(NSString*)sLanguage;
 - (CDItem*)addItem:(NCSItem*)item test:(CDTest*)test;
 

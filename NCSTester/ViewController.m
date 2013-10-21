@@ -7,37 +7,166 @@
 //
 
 #import "ViewController.h"
-#import "GraphView.h"
-
-#import "MainViewController.h"
-#import "BaseViewController.h"
-#import "DCCSViewController.h"
-
+#import "Engine.h"
+#import "NCSItem.h"
 #import "BaseView.h"
+#import "DCCSView.h"
+#import "BaseParser.h"
+
+#import "NCSCoreDataManager.h"
+#import "CDUser.h"
+#import "CDTest.h"
+#import "CDAssesement.h"
 
 @interface ViewController ()
 
-@property (strong, nonatomic) IBOutlet GraphView *gv;
-@property CGRect  viewRect;
+@property (strong, nonatomic) CDUser* user;
+@property (strong, nonatomic) CDAssesement* assessment;
+
+@property (strong, nonatomic) NCSItem* currentItem;
 @property (strong, nonatomic) UIView *contentView;
 @property (strong, nonatomic) NSMutableArray *tests;
+@property (strong, nonatomic) BaseView *currentView;
+
+@property int testIndex;
 @end
 
 @implementation ViewController
 
 
-
-@synthesize mvController;
-@synthesize bvController;
-
 #pragma mark - test view delegate
+
+
+
 
 - (void)testViewDidFinish:(UIView *)view
 {
-    NSInteger newIndex = view.tag + 1;
-    if (newIndex > _tests.count - 1) newIndex = 0;
+    // set index to correct test
+    if (self.testIndex < self.tests.count){
+        self.testIndex +=1;
+    }else{
+        self.testIndex = 0;
+    }
     
-    [self loadTestAtIndex:newIndex];
+    // load test
+    [self loadTestAtIndex:self.testIndex];
+}
+
+
+- (void) executeTestCompleted{
+
+     // [[NCSCoreDataManager sharedInstance] markTestCompleted:self.test];
+    [self testViewDidFinish:nil];
+    //CDTest* t = [self.testList objectAtIndex:self.testPosition];
+}
+
+
+
+- (void) mergeSavedDataIntoItemList{
+
+    // Iterate through items loaded from XML and attempt to
+    // merge items that were saved previously into DB.
+    for(NCSItem* ncsItem in self.currentView.itemList)
+    {
+        /*
+         @implementation CDAssesement
+         
+         @dynamic id;
+         @dynamic creationDate;
+         @dynamic orderNumber;
+         @dynamic user;
+         @dynamic tests;
+         
+         @end
+         
+         
+         CDItem* savedItem = [[NCSCoreDataManager sharedInstance] findItemByID:ncsItem.FormItemOID testID:self.test.testID userID:self.test.assesement.user.ncsID];
+         
+         if(savedItem != nil)
+         {
+         ncsItem.ItemDataOID = [NSString stringWithString:savedItem.itemDataOID];
+         ncsItem.ItemResponseOID = [NSString stringWithString:savedItem.itemResponseOID];
+         ncsItem.ResponseTime = [NSString stringWithString:savedItem.responseTime];
+         ncsItem.Position = [NSString stringWithString:savedItem.position];
+         ncsItem.Response = [NSString stringWithString:savedItem.response];
+         }
+         */
+    }
+
+}
+
+- (void) processResponse:(int) response responsetime:(double) responsetime{
+    
+    NCSItem * myItem  = [self.currentView.engine processResponse: response responsetime:responsetime ];
+    myItem.ResponseTime = [NSString stringWithFormat:@"%f", responsetime];
+    myItem.Response = [NSString stringWithFormat:@"%d", response];
+    
+    //[[NCSCoreDataManager sharedInstance] addItem:item test:self.test];
+    
+    [self performSelector:@selector(setNextItem) withObject:nil afterDelay:0.5];
+    
+}
+
+- (void) startTest: (BaseView *) myView{
+    
+
+    //self.test = [self.testList objectAtIndex:self.testPosition];
+
+    //self.itemList = itemList;
+    //self.myEngine = engine;
+    //[self.myEngine setUser:self.currentTest.assesement.user];
+
+    
+
+    [myView.engine setUser:self.user];
+     [self mergeSavedDataIntoItemList];
+     myView.engine.ItemList = myView.itemList;
+
+    [self setNextItem];
+    
+    /*
+     
+     - (CDAssesement*)addAssesement:(NSArray*)instruments user:(CDUser*)user
+     
+     @implementation CDTest
+     
+     @dynamic completed;
+     @dynamic dateFinished;
+     @dynamic dateStarted;
+     @dynamic lastItemID;
+     @dynamic name;
+     @dynamic orderNumber;
+     @dynamic selectedForUpload;
+     @dynamic testID;
+     @dynamic uploaded;
+     @dynamic userID;
+     @dynamic score;
+     @dynamic error;
+     @dynamic assesement;
+     @dynamic ncsItem;
+     
+     @end
+     */
+    
+    //[[NCSCoreDataManager sharedInstance] updateTestDateStartedStamp:self.test];
+
+}
+
+- (void) setNextItem{
+
+    NSString *sCurrentItem = [self.currentView.engine getNextItem];
+    self.currentItem  = [self.currentView.engine getItem:sCurrentItem];
+
+    
+    // If next item is nil we are done with test
+    // Save data and mark test complete.
+    if(self.currentItem == nil)
+    {
+        //self.bPaused = YES;
+        [self executeTestCompleted];
+    }else{
+        [self.currentView displayItem: self.currentItem];
+    }
 }
 
 
@@ -68,36 +197,47 @@
     cn = [NSLayoutConstraint constraintWithItem:self.contentView attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0.0];
     [self.view addConstraint:cn];
 
-    [self createTestWithName:@"MainView"];
-    [self createTestWithName:@"BaseView"];
+   
+    [self initWithData];
+    
+}
+
+- (void) initWithMetaData: (NSArray*)instruments userid:(NSString*)userid dob:(NSString*)sDOB education:(NSString*)sEducation language:(NSString*)sLanguage {
+
+    self.user = [[NCSCoreDataManager sharedInstance] createUser:userid dob:sDOB education:sEducation language:sLanguage];
+
+    self.assessment = [[NCSCoreDataManager sharedInstance] addAssesement:instruments user:self.user ];
+    
+    for(CDTest* test in self.assessment.tests)
+    {
+        [self createTestWithName:test.name];
+    }
     
     [self loadTestAtIndex:0];
 
-/*
-    self.gv = [[GraphView alloc]initWithFrame:CGRectMake(5,50, self.view.bounds.size.width-10, self.view.bounds.size.height-60)];
-    self.gv.backgroundColor =[UIColor whiteColor] ;
-    self.gv.alpha = .8;
-    [self.view addSubview:self.gv];
-  
+}
+
+- (void) initWithData {
+
+    self.user = [[NCSCoreDataManager sharedInstance] getUserByID:@"0F2092CD-1EA1-4321-A145-0CFCFF63A61D"];
+    /*
+     [self createTestWithName:@"DCCS"];
+     [self createTestWithName:@"VocabPractice"];
+     [self createTestWithName:@"Flanker"];
+     [self createTestWithName:@"Vocab"];
+     [self createTestWithName:@"MainView"];
+     [self createTestWithName:@"BaseView"];
+     */
     
+    NSArray* instruments = [NSArray arrayWithObjects:@"BaseView", @"VocabPractice", @"Vocab", nil];
+    self.assessment = [[NCSCoreDataManager sharedInstance] addAssesement:instruments user:self.user ];
     
-    float width = self.gv.bounds.size.width - 80;
-    float height = self.gv.bounds.size.height - 80;
-    float x = self.gv.bounds.origin.x + 40;
-    float y = self.gv.bounds.origin.y + 40;
+    for(CDTest* test in self.assessment.tests)
+    {
+        [self createTestWithName:test.name];
+    }
     
-    self.viewRect = CGRectMake(x,y,width,height);
-    
-    UIStoryboard* sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-  
-    self.mvController = [sb instantiateViewControllerWithIdentifier:@"MainView"];
-    ((MainViewController*)self.mvController).parent = self;
-    self.bvController = [sb instantiateViewControllerWithIdentifier:@"BaseView"];
-    ((BaseViewController*)self.mvController).parent = self;
-    
-    [self displayContentController:  self.mvController ];
- */
-    
+    [self loadTestAtIndex:0];
 }
 
 - (void)createTestWithName:(NSString*)name
@@ -108,6 +248,9 @@
     testView.frame = self.contentView.bounds;
     
     // testView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    
+    [self.contentView addSubview:testView];
+    [self.tests addObject:testView];
     
     testView.translatesAutoresizingMaskIntoConstraints = NO;
     NSLayoutConstraint *cn = [NSLayoutConstraint constraintWithItem:testView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeWidth multiplier:1.0 constant:0.0];
@@ -123,13 +266,11 @@
     testView.hidden = YES;
     testView.clipsToBounds = YES;
     testView.layer.cornerRadius = 10.0;
-    
-    [self.contentView addSubview:testView];
-    [self.tests addObject:testView];
 
+    /*
     NSLog(@"content view frame %@ | bounds %@",NSStringFromCGRect(self.contentView.frame ), NSStringFromCGRect(self.contentView.bounds ));
     NSLog(@"test view frame %@ | bounds %@",NSStringFromCGRect(testView.frame ), NSStringFromCGRect(testView.bounds ));
-
+     */
 }
 
 - (void)loadTestAtIndex:(NSInteger)index
@@ -147,113 +288,17 @@
     fromView.delegate = nil;
     toView.delegate = self;
     
+    self.currentView = toView;
+    
     [UIView transitionWithView:_contentView duration:1.0 options:UIViewAnimationOptionTransitionCurlUp animations:^{
         fromView.hidden = YES;
         toView.hidden = NO;
     } completion:^(BOOL finished) {
         //
+        [toView onStartFormButton:nil];
     }];
     
 }
-
-
-
-
-//https://developer.apple.com/library/ios/featuredarticles/ViewControllerPGforiPhoneOS/CreatingCustomContainerViewControllers/CreatingCustomContainerViewControllers.html
-- (void) hideContentController: (UIViewController*) content
-{
-    [content willMoveToParentViewController:nil];
-    [content.view removeFromSuperview];
-    [content removeFromParentViewController];
-}
-
-- (void) displayContentController: (UIViewController*) content;
-{
-    [self addChildViewController:content];
- 
-    
-    if ([content isEqual: self.mvController]){
-        self.mvController = content;
-        ((MainViewController*)content).parent = self;
-    }
-    if ([content isEqual: self.bvController]){
-        self.bvController = content;
-        ((BaseViewController*)content).parent = self;
-    }
-
-    content.view.frame = self.viewRect;
-    [self.gv addSubview: content.view];
-    [content didMoveToParentViewController:self];
-}
-
-
--(void) starttransitiontoViewController: (id) delegate oldC:(UIViewController*) oldC newC:(UIViewController*) newC {
-    
-    if(delegate)
-        self.delegate = delegate;
-
-    if ([oldC isEqual: self.mvController]){
-        [self cycleFromViewController: self.mvController toViewController:self.bvController];
-    }
-    if ([oldC isEqual: self.bvController]){
-        [self cycleFromViewController: self.bvController toViewController:self.mvController];
-    }
-    
-}
-
-- (void) notifyDelegateDidFinish
-{
-    if(self.delegate && [self.delegate respondsToSelector:@selector(transitionViewController)]){
-        [self.delegate transitionViewController];
-    }
-}
-
-
-- (void) cycleFromViewController: (UIViewController*) oldC
-                toViewController: (UIViewController*) newC
-{
- 
-    [oldC willMoveToParentViewController:nil];
-    [self addChildViewController:newC];
-    
-    newC.view.frame = self.viewRect;
-    
-    if ([oldC isEqual: self.mvController]){
-        self.bvController = newC;
-        ((BaseViewController*)newC).parent = self;
-        //((BaseViewController*)newC).selectedInstruments = ((MainViewController*)oldC).selectedInstruments;
-        ((BaseViewController*)newC).selectedInstruments = ((MainViewController*)oldC).selectedTests;
-
-    }
-    if ([oldC isEqual: self.bvController]){
-        self.mvController = newC;
-        ((MainViewController*)newC).parent = self;
-    }
-   
-    
-     [self transitionFromViewController: oldC toViewController: newC
-                              duration: 1.5 options:UIViewAnimationOptionAllowAnimatedContent
-                            animations:^{
-                                oldC.view.alpha = 0;
-                                newC.view.alpha = 1;
-                            }
-                            completion:^(BOOL finished) {
-                                [oldC removeFromParentViewController];
-                                [newC didMoveToParentViewController:self];
-                                [self notifyDelegateDidFinish];
-                                
-                                //Send message to baseview controller to start the test.
-                                if ([oldC isEqual: self.mvController]){
-                                    [((BaseViewController*)newC) transitionViewController];
-                                }
-                                
-                               
-                            }];
-    
-    
-      
-}
-
 
 - (void)didReceiveMemoryWarning
 {

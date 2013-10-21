@@ -1,0 +1,36 @@
+﻿<Criterias>
+  <Thresholds>
+    <Threshold ID="1" Description="First sequence of practice items" Value="3" />
+  </Thresholds>
+  <Item_Thresholds>
+    <Item_Threshold ID="1" Operator="1">
+      <Item_Criteria ID="1" Pattern="_CONGRUENT" Value="11" />
+      <Item_Criteria ID="2" Pattern="INCONGRUENT" Value="7" />
+    </Item_Threshold>
+  </Item_Thresholds>
+  <Range ID="1" Min="3" Max="7">
+    <Criteria Section="1" />
+    <Criteria Section="2" />
+    <Criteria Section="3" />
+    <Criteria Section="4" Threshold="1" />
+    <Criteria Section="5" Threshold="1" />
+    <Criteria Section="6" Threshold="1" />
+    <Criteria Section="7" Threshold="1" />
+    <Criteria Section="8" Threshold="1" />
+    <Criteria Section="9" Gate="1" />
+    <Criteria Section="10" Item_Threshold="1" />
+    <Criteria Section="11" Item_Gate="1" />
+    <Criteria Section="19" />
+  </Range>
+  <Range ID="2" Min="8" Max="120">
+    <Criteria Section="1" />
+    <Criteria Section="12" />
+    <Criteria Section="13" Threshold="1" />
+    <Criteria Section="14" Threshold="1" />
+    <Criteria Section="15" Threshold="1" />
+    <Criteria Section="16" Threshold="1" />
+    <Criteria Section="17" Threshold="1" />
+    <Criteria Section="18" Gate="1" />
+    <Criteria Section="19" />
+  </Range>
+</Criterias>

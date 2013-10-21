@@ -89,7 +89,7 @@
     if(!_sectionCriteria){
         NSMutableDictionary *mysectionCriteria = [[NSMutableDictionary alloc] init];
         _sectionCriteria = mysectionCriteria;
-    }
+     }
     return _sectionCriteria;
 }
 -(NSDictionary*)ranges{
@@ -113,7 +113,7 @@
     if(!_sectionItems){
         NSMutableDictionary *mysectionItems = [[NSMutableDictionary alloc] init];
         _sectionItems = mysectionItems;
-    }
+     }
     return _sectionItems;
 }
 #pragma mark - private setter -
@@ -133,7 +133,6 @@
 
 #pragma mark - public properties -
 @synthesize ItemList = _ItemList;
-/* @synthesize NCSParameter = _NCSParameter; */
 @synthesize ParameterDictionary = _ParameterDictionary;
 @synthesize ResultSetList = _ResultSetList;
 @synthesize itemID = _itemID;
@@ -162,14 +161,10 @@
         NCSThreshold* threshold = [self.sectionThresholds objectForKey:criteria.Threshold];
         if(threshold != nil)
         {
-            
-            
-            
             if(threshold.UserValue > 0 && threshold.Section != item.Section){
                 //Reset count to this section
                 //NSLog(@"old/new threshold section %d - %d",threshold.Section,item.Section);
                 threshold.UserValue = 0;
-                
             }
             
 
@@ -200,8 +195,6 @@
         }
         
     }
-    //NSLog(@"Sectional Thresholds [%i]", self.sectionThresholds.count);
-    
 }
 -(void)loadSectionalCriteria: (NCSCriteria*) criteria;{
     
@@ -213,10 +206,6 @@
     {
         [self.sectionCriteria setValue:criteria forKey: [[NSNumber numberWithInt:criteria.Section] stringValue] ];
     }
-    
-    
-    //NSLog(@"Sectional Criterias [%i]", self.sectionCriteria.count);
-    
     
     
 }
@@ -247,8 +236,6 @@
         }
         
     }
-    //NSLog(@"Ranges [%i]", self.ranges.count);
-    
 }
 -(void)evaluateCriteria{
     
@@ -286,9 +273,6 @@
             }
             else
             {
-
-                
-                
             
                 if(threshold.UserValue >= threshold.Value ){
   
@@ -335,8 +319,6 @@
 -(void)setUser:(CDUser*)user{
     
     self.age = user.getUserAge;
-    
-    //NSLog(@"Age is %d", self.age);
 
     NSMutableArray *myRanges = [_ParameterDictionary  objectForKey:@"Ranges"];
     [self loadRanges : myRanges ];
@@ -344,7 +326,6 @@
 }
 
 -(float) getScore{
-    
     
     return (float)self.score;
 
@@ -480,7 +461,6 @@
     
     
     if(self){
-        
         _ParameterDictionary  = paramdictionary;
         NSMutableArray *myThreholds = [_ParameterDictionary  objectForKey:@"Thresholds"];
         [self loadSectionalThresholds : myThreholds ];
@@ -509,19 +489,16 @@
 }
 -(void)loadSectionalDictionary{
 
-    
  // Load all items into sectional Array
  for(int i = 0; i < self.ItemList.count; i++){
  
      NCSItem* item = [self.ItemList objectAtIndex:i];
      NSString* key =  [[NSNumber numberWithInt:item.Section] stringValue];
  
-     
      if([self.sectionCriteria  objectForKey: [[NSNumber numberWithInt:item.Section] stringValue] ] == nil){
          //Only load sections that have criterias
          continue;
      };
-     
      
      if([self.sectionItems objectForKey:key] == nil) {// First item in section
          NSMutableArray *myArray = [[NSMutableArray alloc] init];
@@ -559,10 +536,9 @@
     NSArray *sortedKeys;
     sortedKeys = [keys sortedArrayUsingComparator:^(id obj1, id obj2){ return [obj1 intValue] - [obj2 intValue];}];   
 
+    
  // Load the final order Item List
 for(int i = 0; i < sortedKeys.count; i++){
-    
-     //NSLog(@"key : %i - %@",i,[sortedKeys objectAtIndex:i]);
     
     NSMutableArray *myFinalArray = [self.sectionItems objectForKey: [sortedKeys objectAtIndex:i] ];
     for(int i = 0; i < [myFinalArray count] ; i++){
@@ -570,9 +546,6 @@ for(int i = 0; i < sortedKeys.count; i++){
         NCSItem* item = [myFinalArray objectAtIndex:i];
         
         [self.ItemRangeList addObject:item];
-        //NSLog(@"Loading item : %i - %i",item.Section,item.Order );
-        
-
 
     }
     
@@ -622,8 +595,6 @@ for(int i = 0; i < sortedKeys.count; i++){
         
         self.position = 0;
         self.score = 0;
-        
-        NSLog(@"Engine has been initialized!");
         
         return self;
     }

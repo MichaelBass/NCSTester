@@ -7,17 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ViewControllerNavigation.h"
+
 #import "BaseView.h"
 
 @interface ViewController : UIViewController<TestViewDelegate>
+- (void) initWithData ;
 
-@property (strong, nonatomic) UIViewController *mvController;
-@property (strong, nonatomic) UIViewController *bvController;
-
-@property (nonatomic, assign) id <ViewControllerNavigationDelegate> delegate;
-
--(void) starttransitiontoViewController: (id) delegate oldC:(UIViewController*) oldC newC:(UIViewController*) newC;
-
+- (void)initWithMetaData: (NSArray*)instruments userid:(NSString*)userid dob:(NSString*)sDOB education:(NSString*)sEducation language:(NSString*)sLanguage;
 
 @end

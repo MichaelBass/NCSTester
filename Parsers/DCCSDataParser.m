@@ -24,6 +24,53 @@
 
 @implementation DCCSDataParser
 
++ (NSMutableArray*) parseFormFile{
+    
+    NSMutableArray* rtn = [[NSMutableArray alloc] initWithCapacity:1];
+    BaseParser * parser = [[BaseParser alloc] init];
+    
+    
+    NSString* formFileName =@"DCCSForm";
+    
+    NSError* error;
+    NSString *path = [[NSBundle mainBundle] pathForResource:formFileName ofType: @"xml"];
+    NSString *fileStr = [NSString stringWithContentsOfFile: path encoding: NSUTF8StringEncoding error: &error];
+    
+    NSDictionary *xmlDict = [XMLReader dictionaryForXMLString:fileStr error:&error];
+    
+    NSDictionary* formDict = [xmlDict objectForKey:@"Form"];
+    NSDictionary* itemsDict = [formDict objectForKey:@"Items"];
+    NSArray* itemsArr = [itemsDict objectForKey:@"Item"];
+    
+    for(NSDictionary* itemDict in itemsArr)
+    {
+        // Parse item
+        NCSItem* newItem = [parser parseItem:itemDict];
+        
+        // Parse item elements
+        NSDictionary* elementsDict = [itemDict objectForKey:@"Elements"];
+        NSArray* elementsArr = [elementsDict objectForKey:@"Element"];
+        
+        // Thre returned object can be either a Dictionary or Array
+        if([elementsArr isKindOfClass:[NSArray class]])
+        {
+            for(NSDictionary* element in elementsArr)
+            {
+                [parser parseElementNode:element item:newItem];
+            }
+        }
+        else
+        {
+            [parser parseElementNode:(NSDictionary*)elementsArr item:newItem];
+        }
+        
+        [rtn addObject:newItem];
+    }
+    
+    return rtn;
+    
+}
+
 - (void) loadData: (NSMutableArray*) itemList params: (NSMutableDictionary*) dict
 {
     _itemList = itemList;

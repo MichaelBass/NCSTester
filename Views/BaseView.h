@@ -7,19 +7,35 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
+#import "NCSItem.h"
+#import "Engine.h"
 
 @protocol TestViewDelegate;
 
 
-@interface BaseView : UIView
+@interface BaseView : UIView<AVAudioPlayerDelegate>
 
+@property (strong, nonatomic) NCSItem* item;
 @property (weak, nonatomic) id <TestViewDelegate> delegate;
--(IBAction)onStartFormButton:(id)sender;
 
+@property (strong, nonatomic) id<Engine> engine;
+@property (nonatomic, retain) NSMutableArray* itemList;
+@property (nonatomic, retain) AVAudioPlayer *audioPlayer;
+
+
+- (IBAction)onStartFormButton:(id)sender;
+- (void) playSound: (NSString*) soundFileName;
+- (void) displayItem: (NCSItem*) item;
 @end
 
 @protocol TestViewDelegate
 @required
-- (void)testViewDidFinish:(UIView *)view;
+- (void) testViewDidFinish:(UIView *)view;
+- (void) executeTestCompleted;
+- (void) startTest:(BaseView *)view;
+- (void) processResponse:(int) response responsetime:(double) responsetime;
 @end
+
+

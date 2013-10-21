@@ -82,9 +82,9 @@
     self.selectedTests = tests;
     
 
-    DCCSViewController *newC = [[DCCSViewController alloc] init];
+    //DCCSViewController *newC = [[DCCSViewController alloc] init];
     
- [self.parent starttransitiontoViewController: self oldC:self newC:newC];
+ //[self.parent starttransitiontoViewController: self oldC:self newC:newC];
 }
 
 # pragma mark - UIPicker View Delegate/Datasource -

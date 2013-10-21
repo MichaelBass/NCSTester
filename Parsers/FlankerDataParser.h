@@ -14,4 +14,6 @@
 
 - (void) loadData: (NSMutableArray*) itemList params: (NSMutableDictionary*) dict;
 
++ (NSMutableArray*) parseFormFile;
+
 @end

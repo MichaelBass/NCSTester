@@ -10,6 +10,9 @@
 
 @implementation BaseParser
 
+-(void) loadData: (NSMutableArray*) itemList params: (NSMutableDictionary*) dict{
+
+}
 
 - (NCSItem*) parseItem:(NSDictionary*) itemDict
 {

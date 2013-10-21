@@ -239,6 +239,30 @@
     return YES;
 }
 
+- (CDUser*)createUser:(NSString*)sID dob:(NSString*)sDOB education:(NSString*)sEducation language:(NSString*)sLanguage
+{
+    CDUser* newUser = [self findUserByID:sID];
+    
+    // Check if user with this ID already exists and update it if found
+    if(newUser == nil)
+    {
+        // Create a new instance of the entity managed by the fetched results controller.
+        NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"CDUser" inManagedObjectContext:__managedObjectContext];
+        newUser = (CDUser*)[NSEntityDescription insertNewObjectForEntityForName:[entityDescription name] inManagedObjectContext:__managedObjectContext];
+        
+        newUser.uuID = [NSString stringWithString:[self GetUUID]];
+    }
+    
+    
+    newUser.ncsID = [NSString stringWithString:sID];
+    newUser.dob = [NSString stringWithString:sDOB];
+    newUser.educationLevel = [NSString stringWithString:sEducation];
+    newUser.language = [NSString stringWithString:sLanguage];
+    
+    [self saveData];
+    return newUser;
+}
+
 
 #pragma mark - Database Search -
 

@@ -1,0 +1,78 @@
+﻿<Form FormDataOID="" Description="NIH TB Picture Vocabulary Test - Practice" AssessmentFormOID="" AccrualAssessmentModuleOID="" Accrual="" FormOrder="6" ConfigID="" Status="" DateStarted="" DateFinished="" StyleSheet="xsl/VOCAB.xsl" PresentationID="1" Engine="SequenceEngine" FormType="Short Form" CatFormTypeName="Item Bank/CAT (Computerized Adaptive Testing)" OriginatingProjectOID="678B6AAB-846D-4C84-BF24-C0913CE00A7F">
+  <Items>
+    <Item ItemDataOID="" FormItemOID="B4D7B60D-D159-4754-9E14-837EA18A2088" ItemResponseOID="" Response="" ResponseTime="" ResponseDescription="" Position="" Section="1" Order="1" ID="LASmp001" StyleSheet="">
+      <Validations />
+      <Elements>
+        <Element ElementOID="5337BD5D-EF69-456E-9DC6-50220E4B270B" Description="LASmp001" ElementOrder="1" ElementType="Stem">
+          <Resources>
+            <Resource ResourceOID="5F4A47E8-416A-DE11-B34B-000000000000" Description="LASmp001" Type="txt" />
+          </Resources>
+        </Element>
+        <Element ElementOID="43CBD86D-6B5B-44DD-98FF-B6DA7ECB25F0" Description="Container: 43CBD86D-6B5B-44DD-98FF-B6DA7ECB25F0" ElementOrder="2" ElementType="ResponseSet">
+          <Resources>
+            <Resource />
+          </Resources>
+          <Mappings>
+            <Map ElementOID="B7EB88B0-7A4C-4B95-A94F-552FFB3383E9" Description="0" Value="1" ItemResponseOID="B18C4164-2B04-4074-8562-D03BCC9572D7" FormItemOID="B4D7B60D-D159-4754-9E14-837EA18A2088" DataType="" Position="1">
+              <Resources>
+                <Resource ResourceOID="604A47E8-416A-DE11-B34B-000000000000" Description="LASmp001-3" Type="txt" />
+              </Resources>
+            </Map>
+            <Map ElementOID="F806C06E-2474-428C-B970-8A7EDB1CE078" Description="0" Value="2" ItemResponseOID="C9342849-A371-4CC0-8BCA-812225BA19E8" FormItemOID="B4D7B60D-D159-4754-9E14-837EA18A2088" DataType="" Position="2">
+              <Resources>
+                <Resource ResourceOID="634A47E8-416A-DE11-B34B-000000000000" Description="LASmp002-2" Type="txt" />
+              </Resources>
+            </Map>
+            <Map ElementOID="CFE7E6DB-6E3B-4A4E-9ED5-5F9C8D67467B" Description="0" Value="3" ItemResponseOID="0506DB53-0939-470A-BDCE-6F729219E9B8" FormItemOID="B4D7B60D-D159-4754-9E14-837EA18A2088" DataType="" Position="3">
+              <Resources>
+                <Resource ResourceOID="614A47E8-416A-DE11-B34B-000000000000" Description="LASmp001-1" Type="txt" />
+              </Resources>
+            </Map>
+            <Map ElementOID="7CC9BDEF-CC6F-428D-AC61-DDDFD536436B" Description="1" Value="4" ItemResponseOID="63A4456D-F49E-45B9-A622-2FC779E577D6" FormItemOID="B4D7B60D-D159-4754-9E14-837EA18A2088" DataType="" Position="4">
+              <Resources>
+                <Resource ResourceOID="644A47E8-416A-DE11-B34B-000000000000" Description="LASmp001-9" Type="txt" />
+              </Resources>
+            </Map>
+          </Mappings>
+        </Element>
+      </Elements>
+    </Item>
+    <Item ItemDataOID="" FormItemOID="E1886A52-637A-48C9-BAA8-B7AD6DADA414" ItemResponseOID="" Response="" ResponseTime="" ResponseDescription="" Position="" Section="1" Order="2" ID="LASmp002" StyleSheet="">
+      <Validations />
+      <Elements>
+        <Element ElementOID="2AB35D79-DE18-4DE7-990B-160F87099239" Description="LASmp002" ElementOrder="1" ElementType="Stem">
+          <Resources>
+            <Resource ResourceOID="5C4A47E8-416A-DE11-B34B-000000000000" Description="LASmp002" Type="txt" />
+          </Resources>
+        </Element>
+        <Element ElementOID="CFDAB59E-B1F0-4F8A-8CE1-57B1BB84BADC" Description="Container: CFDAB59E-B1F0-4F8A-8CE1-57B1BB84BADC" ElementOrder="2" ElementType="ResponseSet">
+          <Resources>
+            <Resource />
+          </Resources>
+          <Mappings>
+            <Map ElementOID="5D0390C6-6F3E-47D0-A301-31EF087E3A9F" Description="0" Value="1" ItemResponseOID="7AEA926B-A907-404B-AC8A-91BF9D814D11" FormItemOID="E1886A52-637A-48C9-BAA8-B7AD6DADA414" DataType="" Position="1">
+              <Resources>
+                <Resource ResourceOID="5D4A47E8-416A-DE11-B34B-000000000000" Description="LASmp002-1" Type="txt" />
+              </Resources>
+            </Map>
+            <Map ElementOID="3598A390-93D1-43BB-88C4-3EB8F3D9664B" Description="0" Value="2" ItemResponseOID="D6DA1015-F684-4A4F-B545-0AE1A0EEE20E" FormItemOID="E1886A52-637A-48C9-BAA8-B7AD6DADA414" DataType="" Position="2">
+              <Resources>
+                <Resource ResourceOID="5E4A47E8-416A-DE11-B34B-000000000000" Description="LASmp002-2" Type="txt" />
+              </Resources>
+            </Map>
+            <Map ElementOID="E1D2BBC8-7801-4B0F-A0AF-74F2C1216227" Description="1" Value="3" ItemResponseOID="5C57DD93-27F3-4EB1-B904-AE73F21C0906" FormItemOID="E1886A52-637A-48C9-BAA8-B7AD6DADA414" DataType="" Position="3">
+              <Resources>
+                <Resource ResourceOID="624A47E8-416A-DE11-B34B-000000000000" Description="LASmp002-9" Type="txt" />
+              </Resources>
+            </Map>
+            <Map ElementOID="6452C926-4DA4-46A8-ABB1-FC277694905F" Description="0" Value="4" ItemResponseOID="DFCC8FE2-96A9-4F36-9AB9-97D97726DAFB" FormItemOID="E1886A52-637A-48C9-BAA8-B7AD6DADA414" DataType="" Position="4">
+              <Resources>
+                <Resource ResourceOID="654A47E8-416A-DE11-B34B-000000000000" Description="LASmp002-3" Type="txt" />
+              </Resources>
+            </Map>
+          </Mappings>
+        </Element>
+      </Elements>
+    </Item>
+  </Items>
+</Form>

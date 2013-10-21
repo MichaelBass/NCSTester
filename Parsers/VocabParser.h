@@ -10,10 +10,11 @@
 @interface VocabParser: BaseParser
 {
     NSMutableArray* _itemList;
-
     NSMutableDictionary* _parameterDictionary;
 }
 
 - (void) loadData: (NSMutableArray*) itemList params: (NSMutableDictionary*) dict;
+
++ (NSMutableArray*) parseFormFile;
 
 @end

@@ -20,4 +20,6 @@
 - (NCSElement*) parseElement: (NSDictionary*) elementDict;
 - (NCSItem*) parseItem:(NSDictionary*) itemDict;
 
+- (void) loadData: (NSMutableArray*) itemList params: (NSMutableDictionary*) dict;
+
 @end

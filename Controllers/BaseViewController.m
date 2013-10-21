@@ -76,7 +76,7 @@
 
 -(IBAction)onStartButton:(id)sender
 {
-    [self.parent starttransitiontoViewController: self oldC:self newC:self];
+    //[self.parent starttransitiontoViewController: self oldC:self newC:self];
 }
 
 - (void)saveItem:(NCSItem*)item
