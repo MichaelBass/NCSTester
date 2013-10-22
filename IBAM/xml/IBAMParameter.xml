@@ -1,0 +1,145 @@
+﻿<Criterias>
+<Thresholds>
+<Threshold ID="1" Description="First sequence of practice items" Value="1" />
+<Threshold ID="2" Description="Second sequence of practice items" Value="1" />
+<Threshold ID="3" Description="First sequence of practice items" Value="1" />
+<Threshold ID="4" Description="Second sequence of practice items" Value="2" />
+<Threshold ID="5" Description="First sequence of 3 card practice items" Value="2" />
+<Threshold ID="6" Description="Second sequence of 4 card practice items" Value="3" />
+<Threshold ID="7" Description="First sequence of 4 card practice items" Value="3" />
+</Thresholds>
+<Range ID="1" Min="3" Max="4">
+<Criteria Section="0" Type="1" />
+<Criteria Section="0" Type="2" />
+<Criteria Section="0" Type="3" />
+<Criteria Section="1" Type="1" />
+<Criteria Section="1" Type="2" />
+<Criteria Section="1" Type="3" />
+<Criteria Section="2" Type="1" Threshold="3" />
+<Criteria Section="3" Type="1" Threshold="3" />
+<Criteria Section="4" Type="1" Threshold="4" Gate="3" />
+<Criteria Section="5" Type="1" Threshold="4" />
+<Criteria Section="6" Type="1" Threshold="4" />
+<Criteria Section="7" Type="1" Threshold="4" />
+<Criteria Section="2" Type="2" Threshold="3" />
+<Criteria Section="3" Type="2" Threshold="3" />
+<Criteria Section="4" Type="2" Threshold="4" Gate="3" />
+<Criteria Section="5" Type="2" Threshold="4" />
+<Criteria Section="6" Type="2" Threshold="4" />
+<Criteria Section="7" Type="2" Threshold="4" />
+<Criteria Section="2" Type="3" Threshold="3" />
+<Criteria Section="3" Type="3" Threshold="3" />
+<Criteria Section="4" Type="3" Threshold="4" Gate="3" />
+<Criteria Section="5" Type="3" Threshold="4" />
+<Criteria Section="6" Type="3" Threshold="4" />
+<Criteria Section="7" Type="3" Threshold="4" />
+<Criteria Section="33" Type="1" Gate="4" />
+<Criteria Section="34" Type="1" />
+<Criteria Section="51" Type="2" Gate="4" />
+<Criteria Section="52" Type="2" />
+<Criteria Section="15" Type="3" Gate="4" />
+<Criteria Section="16" Type="3" />
+</Range>
+<Range ID="2" Min="5" Max="6">
+<Criteria Section="0" Type="1" />
+<Criteria Section="0" Type="2" />
+<Criteria Section="0" Type="3" />
+<Criteria Section="1" Type="1" />
+<Criteria Section="1" Type="2" />
+<Criteria Section="1" Type="3" />
+<Criteria Section="4" Type="1" Threshold="5" />
+<Criteria Section="5" Type="1" Threshold="5" />
+<Criteria Section="6" Type="1" Threshold="5" />
+<Criteria Section="7" Type="1" Threshold="5" />
+<Criteria Section="4" Type="2" Threshold="5" />
+<Criteria Section="5" Type="2" Threshold="5" />
+<Criteria Section="6" Type="2" Threshold="5" />
+<Criteria Section="7" Type="2" Threshold="5" />
+<Criteria Section="4" Type="3" Threshold="5" />
+<Criteria Section="5" Type="3" Threshold="5" />
+<Criteria Section="6" Type="3" Threshold="5" />
+<Criteria Section="7" Type="3" Threshold="5" />
+<Criteria Section="8" Type="1" Threshold="6" Gate="5" />
+<Criteria Section="9" Type="1" Threshold="6" />
+<Criteria Section="10" Type="1" Threshold="6" />
+<Criteria Section="11" Type="1" Threshold="6" />
+<Criteria Section="8" Type="2" Threshold="6" Gate="5" />
+<Criteria Section="9" Type="2" Threshold="6" />
+<Criteria Section="10" Type="2" Threshold="6" />
+<Criteria Section="11" Type="2" Threshold="6" />
+<Criteria Section="8" Type="3" Threshold="6" Gate="5" />
+<Criteria Section="9" Type="3" Threshold="6" />
+<Criteria Section="10" Type="3" Threshold="6" />
+<Criteria Section="11" Type="3" Threshold="6" />
+<Criteria Section="36" Type="1" Gate="6" />
+<Criteria Section="37" Type="1" />
+<Criteria Section="18" Type="2" Gate="6" />
+<Criteria Section="19" Type="2" />
+<Criteria Section="54" Type="3" Gate="6" />
+<Criteria Section="55" Type="3" />
+</Range>
+<Range ID="3" Min="7" Max="7">
+<Criteria Section="0" Type="1" />
+<Criteria Section="0" Type="2" />
+<Criteria Section="0" Type="3" />
+<Criteria Section="1" Type="1" />
+<Criteria Section="1" Type="2" />
+<Criteria Section="1" Type="3" />
+<Criteria Section="4" Type="1" Threshold="5" />
+<Criteria Section="5" Type="1" Threshold="5" />
+<Criteria Section="6" Type="1" Threshold="5" />
+<Criteria Section="7" Type="1" Threshold="5" />
+<Criteria Section="4" Type="2" Threshold="5" />
+<Criteria Section="5" Type="2" Threshold="5" />
+<Criteria Section="6" Type="2" Threshold="5" />
+<Criteria Section="7" Type="2" Threshold="5" />
+<Criteria Section="4" Type="3" Threshold="5" />
+<Criteria Section="5" Type="3" Threshold="5" />
+<Criteria Section="6" Type="3" Threshold="5" />
+<Criteria Section="7" Type="3" Threshold="5" />
+<Criteria Section="8" Type="1" Threshold="6" Gate="5" />
+<Criteria Section="9" Type="1" Threshold="6" />
+<Criteria Section="10" Type="1" Threshold="6" />
+<Criteria Section="11" Type="1" Threshold="6" />
+<Criteria Section="8" Type="2" Threshold="6" Gate="5" />
+<Criteria Section="9" Type="2" Threshold="6" />
+<Criteria Section="10" Type="2" Threshold="6" />
+<Criteria Section="11" Type="2" Threshold="6" />
+<Criteria Section="8" Type="3" Threshold="6" Gate="5" />
+<Criteria Section="9" Type="3" Threshold="6" />
+<Criteria Section="10" Type="3" Threshold="6" />
+<Criteria Section="11" Type="3" Threshold="6" />
+<Criteria Section="42" Type="1" Gate="6" />
+<Criteria Section="46" Type="1" />
+<Criteria Section="24" Type="2" Gate="6" />
+<Criteria Section="28" Type="2" />
+<Criteria Section="60" Type="3" Gate="6" />
+<Criteria Section="64" Type="3" />
+</Range>	
+<Range ID="4" Min="8" Max="120">
+<Criteria Section="0" Type="1" />
+<Criteria Section="0" Type="2" />
+<Criteria Section="0" Type="3" />
+<Criteria Section="1" Type="1" />
+<Criteria Section="1" Type="2" />
+<Criteria Section="1" Type="3" />
+<Criteria Section="8" Type="1" Threshold="7" />
+<Criteria Section="9" Type="1" Threshold="7" />
+<Criteria Section="10" Type="1" Threshold="7" />
+<Criteria Section="11" Type="1" Threshold="7" />
+<Criteria Section="8" Type="2" Threshold="7" />
+<Criteria Section="9" Type="2" Threshold="7" />
+<Criteria Section="10" Type="2" Threshold="7" />
+<Criteria Section="11" Type="2" Threshold="7" />
+<Criteria Section="8" Type="3" Threshold="7" />
+<Criteria Section="9" Type="3" Threshold="7" />
+<Criteria Section="10" Type="3" Threshold="7" />
+<Criteria Section="11" Type="3" Threshold="7" />
+<Criteria Section="42" Type="1" Gate="7" />
+<Criteria Section="46" Type="1" />
+<Criteria Section="24" Type="2" Gate="7" />
+<Criteria Section="28" Type="2" />
+<Criteria Section="60" Type="3" Gate="7" />
+<Criteria Section="64" Type="3" />
+</Range>	
+</Criterias>

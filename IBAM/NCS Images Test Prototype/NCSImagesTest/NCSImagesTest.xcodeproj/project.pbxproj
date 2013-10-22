@@ -1,0 +1,430 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA289FA0170A218B00A37E17 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA289F9F170A218B00A37E17 /* UIKit.framework */; };
+		FA289FA2170A218B00A37E17 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA289FA1170A218B00A37E17 /* Foundation.framework */; };
+		FA289FA4170A218B00A37E17 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA289FA3170A218B00A37E17 /* CoreGraphics.framework */; };
+		FA289FAA170A218B00A37E17 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA289FA8170A218B00A37E17 /* InfoPlist.strings */; };
+		FA289FAC170A218B00A37E17 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA289FAB170A218B00A37E17 /* main.m */; };
+		FA289FB0170A218B00A37E17 /* NCSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA289FAF170A218B00A37E17 /* NCSAppDelegate.m */; };
+		FA289FB2170A218B00A37E17 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = FA289FB1170A218B00A37E17 /* Default.png */; };
+		FA289FB4170A218B00A37E17 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA289FB3170A218B00A37E17 /* Default@2x.png */; };
+		FA289FB6170A218B00A37E17 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA289FB5170A218B00A37E17 /* Default-568h@2x.png */; };
+		FA289FB9170A218B00A37E17 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA289FB7170A218B00A37E17 /* MainStoryboard.storyboard */; };
+		FA289FBC170A218B00A37E17 /* NCSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA289FBB170A218B00A37E17 /* NCSViewController.m */; };
+		FA289FDC170A223700A37E17 /* DropZone.png in Resources */ = {isa = PBXBuildFile; fileRef = FA289FC3170A223700A37E17 /* DropZone.png */; };
+		FA289FDD170A223700A37E17 /* Launchpad.png in Resources */ = {isa = PBXBuildFile; fileRef = FA289FC4170A223700A37E17 /* Launchpad.png */; };
+		FA289FDE170A223700A37E17 /* baby.png in Resources */ = {isa = PBXBuildFile; fileRef = FA289FC6170A223700A37E17 /* baby.png */; };
+		FA289FDF170A223700A37E17 /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = FA289FC7170A223700A37E17 /* ball.png */; };
+		FA289FE0170A223700A37E17 /* butterfly.png in Resources */ = {isa = PBXBuildFile; fileRef = FA289FC8170A223700A37E17 /* butterfly.png */; };
+		FA289FE1170A223700A37E17 /* catch.png in Resources */ = {isa = PBXBuildFile; fileRef = FA289FC9170A223700A37E17 /* catch.png */; };
+		FA289FE2170A223700A37E17 /* dog.png in Resources */ = {isa = PBXBuildFile; fileRef = FA289FCA170A223700A37E17 /* dog.png */; };
+		FA289FE3170A223700A37E17 /* feed the ducks.png in Resources */ = {isa = PBXBuildFile; fileRef = FA289FCB170A223700A37E17 /* feed the ducks.png */; };
+		FA289FE4170A223700A37E17 /* flower.png in Resources */ = {isa = PBXBuildFile; fileRef = FA289FCC170A223700A37E17 /* flower.png */; };
+		FA289FE5170A223700A37E17 /* get the duck food.png in Resources */ = {isa = PBXBuildFile; fileRef = FA289FCD170A223700A37E17 /* get the duck food.png */; };
+		FA289FE6170A223700A37E17 /* kite.png in Resources */ = {isa = PBXBuildFile; fileRef = FA289FCE170A223700A37E17 /* kite.png */; };
+		FA289FE7170A223700A37E17 /* lay out the blanket.png in Resources */ = {isa = PBXBuildFile; fileRef = FA289FCF170A223700A37E17 /* lay out the blanket.png */; };
+		FA289FE8170A223700A37E17 /* monkey bars.png in Resources */ = {isa = PBXBuildFile; fileRef = FA289FD0170A223700A37E17 /* monkey bars.png */; };
+		FA289FE9170A223700A37E17 /* Open the basket.png in Resources */ = {isa = PBXBuildFile; fileRef = FA289FD1170A223700A37E17 /* Open the basket.png */; };
+		FA289FEA170A223700A37E17 /* put a coin in the dispenser.png in Resources */ = {isa = PBXBuildFile; fileRef = FA289FD2170A223700A37E17 /* put a coin in the dispenser.png */; };
+		FA289FEB170A223700A37E17 /* Read a book.png in Resources */ = {isa = PBXBuildFile; fileRef = FA289FD3170A223700A37E17 /* Read a book.png */; };
+		FA289FEC170A223700A37E17 /* Ride the bike.png in Resources */ = {isa = PBXBuildFile; fileRef = FA289FD4170A223700A37E17 /* Ride the bike.png */; };
+		FA289FED170A223700A37E17 /* Row the boat.png in Resources */ = {isa = PBXBuildFile; fileRef = FA289FD5170A223700A37E17 /* Row the boat.png */; };
+		FA289FEE170A223700A37E17 /* sandbox.png in Resources */ = {isa = PBXBuildFile; fileRef = FA289FD6170A223700A37E17 /* sandbox.png */; };
+		FA289FEF170A223700A37E17 /* sidewalk.png in Resources */ = {isa = PBXBuildFile; fileRef = FA289FD7170A223700A37E17 /* sidewalk.png */; };
+		FA289FF0170A223700A37E17 /* sit on the blanket.png in Resources */ = {isa = PBXBuildFile; fileRef = FA289FD8170A223700A37E17 /* sit on the blanket.png */; };
+		FA289FF1170A223700A37E17 /* slide.png in Resources */ = {isa = PBXBuildFile; fileRef = FA289FD9170A223700A37E17 /* slide.png */; };
+		FA289FF2170A223700A37E17 /* swing.png in Resources */ = {isa = PBXBuildFile; fileRef = FA289FDA170A223700A37E17 /* swing.png */; };
+		FA289FF3170A223700A37E17 /* wagon.png in Resources */ = {isa = PBXBuildFile; fileRef = FA289FDB170A223700A37E17 /* wagon.png */; };
+		FA289FF6170A247200A37E17 /* NCSBox.m in Sources */ = {isa = PBXBuildFile; fileRef = FA289FF5170A247200A37E17 /* NCSBox.m */; };
+		FA289FF8170A3A9600A37E17 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA289FF7170A3A9600A37E17 /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FA289F9C170A218B00A37E17 /* NCSImagesTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NCSImagesTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA289F9F170A218B00A37E17 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FA289FA1170A218B00A37E17 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FA289FA3170A218B00A37E17 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FA289FA7170A218B00A37E17 /* NCSImagesTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NCSImagesTest-Info.plist"; sourceTree = "<group>"; };
+		FA289FA9170A218B00A37E17 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FA289FAB170A218B00A37E17 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FA289FAD170A218B00A37E17 /* NCSImagesTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NCSImagesTest-Prefix.pch"; sourceTree = "<group>"; };
+		FA289FAE170A218B00A37E17 /* NCSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCSAppDelegate.h; sourceTree = "<group>"; };
+		FA289FAF170A218B00A37E17 /* NCSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCSAppDelegate.m; sourceTree = "<group>"; };
+		FA289FB1170A218B00A37E17 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		FA289FB3170A218B00A37E17 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		FA289FB5170A218B00A37E17 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		FA289FB8170A218B00A37E17 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		FA289FBA170A218B00A37E17 /* NCSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCSViewController.h; sourceTree = "<group>"; };
+		FA289FBB170A218B00A37E17 /* NCSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCSViewController.m; sourceTree = "<group>"; };
+		FA289FC3170A223700A37E17 /* DropZone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DropZone.png; sourceTree = "<group>"; };
+		FA289FC4170A223700A37E17 /* Launchpad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Launchpad.png; sourceTree = "<group>"; };
+		FA289FC6170A223700A37E17 /* baby.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = baby.png; sourceTree = "<group>"; };
+		FA289FC7170A223700A37E17 /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball.png; sourceTree = "<group>"; };
+		FA289FC8170A223700A37E17 /* butterfly.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = butterfly.png; sourceTree = "<group>"; };
+		FA289FC9170A223700A37E17 /* catch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = catch.png; sourceTree = "<group>"; };
+		FA289FCA170A223700A37E17 /* dog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dog.png; sourceTree = "<group>"; };
+		FA289FCB170A223700A37E17 /* feed the ducks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "feed the ducks.png"; sourceTree = "<group>"; };
+		FA289FCC170A223700A37E17 /* flower.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flower.png; sourceTree = "<group>"; };
+		FA289FCD170A223700A37E17 /* get the duck food.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "get the duck food.png"; sourceTree = "<group>"; };
+		FA289FCE170A223700A37E17 /* kite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kite.png; sourceTree = "<group>"; };
+		FA289FCF170A223700A37E17 /* lay out the blanket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lay out the blanket.png"; sourceTree = "<group>"; };
+		FA289FD0170A223700A37E17 /* monkey bars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "monkey bars.png"; sourceTree = "<group>"; };
+		FA289FD1170A223700A37E17 /* Open the basket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Open the basket.png"; sourceTree = "<group>"; };
+		FA289FD2170A223700A37E17 /* put a coin in the dispenser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "put a coin in the dispenser.png"; sourceTree = "<group>"; };
+		FA289FD3170A223700A37E17 /* Read a book.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Read a book.png"; sourceTree = "<group>"; };
+		FA289FD4170A223700A37E17 /* Ride the bike.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ride the bike.png"; sourceTree = "<group>"; };
+		FA289FD5170A223700A37E17 /* Row the boat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Row the boat.png"; sourceTree = "<group>"; };
+		FA289FD6170A223700A37E17 /* sandbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sandbox.png; sourceTree = "<group>"; };
+		FA289FD7170A223700A37E17 /* sidewalk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sidewalk.png; sourceTree = "<group>"; };
+		FA289FD8170A223700A37E17 /* sit on the blanket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sit on the blanket.png"; sourceTree = "<group>"; };
+		FA289FD9170A223700A37E17 /* slide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slide.png; sourceTree = "<group>"; };
+		FA289FDA170A223700A37E17 /* swing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swing.png; sourceTree = "<group>"; };
+		FA289FDB170A223700A37E17 /* wagon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wagon.png; sourceTree = "<group>"; };
+		FA289FF4170A247200A37E17 /* NCSBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCSBox.h; sourceTree = "<group>"; };
+		FA289FF5170A247200A37E17 /* NCSBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCSBox.m; sourceTree = "<group>"; };
+		FA289FF7170A3A9600A37E17 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA289F99170A218B00A37E17 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA289FF8170A3A9600A37E17 /* QuartzCore.framework in Frameworks */,
+				FA289FA0170A218B00A37E17 /* UIKit.framework in Frameworks */,
+				FA289FA2170A218B00A37E17 /* Foundation.framework in Frameworks */,
+				FA289FA4170A218B00A37E17 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA289F93170A218B00A37E17 = {
+			isa = PBXGroup;
+			children = (
+				FA289FA5170A218B00A37E17 /* NCSImagesTest */,
+				FA289F9E170A218B00A37E17 /* Frameworks */,
+				FA289F9D170A218B00A37E17 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FA289F9D170A218B00A37E17 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA289F9C170A218B00A37E17 /* NCSImagesTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA289F9E170A218B00A37E17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA289FF7170A3A9600A37E17 /* QuartzCore.framework */,
+				FA289F9F170A218B00A37E17 /* UIKit.framework */,
+				FA289FA1170A218B00A37E17 /* Foundation.framework */,
+				FA289FA3170A218B00A37E17 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA289FA5170A218B00A37E17 /* NCSImagesTest */ = {
+			isa = PBXGroup;
+			children = (
+				FA289FAE170A218B00A37E17 /* NCSAppDelegate.h */,
+				FA289FAF170A218B00A37E17 /* NCSAppDelegate.m */,
+				FA289FB7170A218B00A37E17 /* MainStoryboard.storyboard */,
+				FA289FBA170A218B00A37E17 /* NCSViewController.h */,
+				FA289FBB170A218B00A37E17 /* NCSViewController.m */,
+				FA289FF4170A247200A37E17 /* NCSBox.h */,
+				FA289FF5170A247200A37E17 /* NCSBox.m */,
+				FA289FC2170A223700A37E17 /* Images */,
+				FA289FA6170A218B00A37E17 /* Supporting Files */,
+			);
+			path = NCSImagesTest;
+			sourceTree = "<group>";
+		};
+		FA289FA6170A218B00A37E17 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FA289FA7170A218B00A37E17 /* NCSImagesTest-Info.plist */,
+				FA289FA8170A218B00A37E17 /* InfoPlist.strings */,
+				FA289FAB170A218B00A37E17 /* main.m */,
+				FA289FAD170A218B00A37E17 /* NCSImagesTest-Prefix.pch */,
+				FA289FB1170A218B00A37E17 /* Default.png */,
+				FA289FB3170A218B00A37E17 /* Default@2x.png */,
+				FA289FB5170A218B00A37E17 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FA289FC2170A223700A37E17 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				FA289FC3170A223700A37E17 /* DropZone.png */,
+				FA289FC4170A223700A37E17 /* Launchpad.png */,
+				FA289FC5170A223700A37E17 /* Park */,
+			);
+			path = Images;
+			sourceTree = SOURCE_ROOT;
+		};
+		FA289FC5170A223700A37E17 /* Park */ = {
+			isa = PBXGroup;
+			children = (
+				FA289FC6170A223700A37E17 /* baby.png */,
+				FA289FC7170A223700A37E17 /* ball.png */,
+				FA289FC8170A223700A37E17 /* butterfly.png */,
+				FA289FC9170A223700A37E17 /* catch.png */,
+				FA289FCA170A223700A37E17 /* dog.png */,
+				FA289FCB170A223700A37E17 /* feed the ducks.png */,
+				FA289FCC170A223700A37E17 /* flower.png */,
+				FA289FCD170A223700A37E17 /* get the duck food.png */,
+				FA289FCE170A223700A37E17 /* kite.png */,
+				FA289FCF170A223700A37E17 /* lay out the blanket.png */,
+				FA289FD0170A223700A37E17 /* monkey bars.png */,
+				FA289FD1170A223700A37E17 /* Open the basket.png */,
+				FA289FD2170A223700A37E17 /* put a coin in the dispenser.png */,
+				FA289FD3170A223700A37E17 /* Read a book.png */,
+				FA289FD4170A223700A37E17 /* Ride the bike.png */,
+				FA289FD5170A223700A37E17 /* Row the boat.png */,
+				FA289FD6170A223700A37E17 /* sandbox.png */,
+				FA289FD7170A223700A37E17 /* sidewalk.png */,
+				FA289FD8170A223700A37E17 /* sit on the blanket.png */,
+				FA289FD9170A223700A37E17 /* slide.png */,
+				FA289FDA170A223700A37E17 /* swing.png */,
+				FA289FDB170A223700A37E17 /* wagon.png */,
+			);
+			path = Park;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA289F9B170A218B00A37E17 /* NCSImagesTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA289FBF170A218B00A37E17 /* Build configuration list for PBXNativeTarget "NCSImagesTest" */;
+			buildPhases = (
+				FA289F98170A218B00A37E17 /* Sources */,
+				FA289F99170A218B00A37E17 /* Frameworks */,
+				FA289F9A170A218B00A37E17 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NCSImagesTest;
+			productName = NCSImagesTest;
+			productReference = FA289F9C170A218B00A37E17 /* NCSImagesTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA289F94170A218B00A37E17 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = NCS;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = NCS;
+			};
+			buildConfigurationList = FA289F97170A218B00A37E17 /* Build configuration list for PBXProject "NCSImagesTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FA289F93170A218B00A37E17;
+			productRefGroup = FA289F9D170A218B00A37E17 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA289F9B170A218B00A37E17 /* NCSImagesTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA289F9A170A218B00A37E17 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA289FAA170A218B00A37E17 /* InfoPlist.strings in Resources */,
+				FA289FB2170A218B00A37E17 /* Default.png in Resources */,
+				FA289FB4170A218B00A37E17 /* Default@2x.png in Resources */,
+				FA289FB6170A218B00A37E17 /* Default-568h@2x.png in Resources */,
+				FA289FB9170A218B00A37E17 /* MainStoryboard.storyboard in Resources */,
+				FA289FDC170A223700A37E17 /* DropZone.png in Resources */,
+				FA289FDD170A223700A37E17 /* Launchpad.png in Resources */,
+				FA289FDE170A223700A37E17 /* baby.png in Resources */,
+				FA289FDF170A223700A37E17 /* ball.png in Resources */,
+				FA289FE0170A223700A37E17 /* butterfly.png in Resources */,
+				FA289FE1170A223700A37E17 /* catch.png in Resources */,
+				FA289FE2170A223700A37E17 /* dog.png in Resources */,
+				FA289FE3170A223700A37E17 /* feed the ducks.png in Resources */,
+				FA289FE4170A223700A37E17 /* flower.png in Resources */,
+				FA289FE5170A223700A37E17 /* get the duck food.png in Resources */,
+				FA289FE6170A223700A37E17 /* kite.png in Resources */,
+				FA289FE7170A223700A37E17 /* lay out the blanket.png in Resources */,
+				FA289FE8170A223700A37E17 /* monkey bars.png in Resources */,
+				FA289FE9170A223700A37E17 /* Open the basket.png in Resources */,
+				FA289FEA170A223700A37E17 /* put a coin in the dispenser.png in Resources */,
+				FA289FEB170A223700A37E17 /* Read a book.png in Resources */,
+				FA289FEC170A223700A37E17 /* Ride the bike.png in Resources */,
+				FA289FED170A223700A37E17 /* Row the boat.png in Resources */,
+				FA289FEE170A223700A37E17 /* sandbox.png in Resources */,
+				FA289FEF170A223700A37E17 /* sidewalk.png in Resources */,
+				FA289FF0170A223700A37E17 /* sit on the blanket.png in Resources */,
+				FA289FF1170A223700A37E17 /* slide.png in Resources */,
+				FA289FF2170A223700A37E17 /* swing.png in Resources */,
+				FA289FF3170A223700A37E17 /* wagon.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA289F98170A218B00A37E17 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA289FAC170A218B00A37E17 /* main.m in Sources */,
+				FA289FB0170A218B00A37E17 /* NCSAppDelegate.m in Sources */,
+				FA289FBC170A218B00A37E17 /* NCSViewController.m in Sources */,
+				FA289FF6170A247200A37E17 /* NCSBox.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FA289FA8170A218B00A37E17 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA289FA9170A218B00A37E17 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FA289FB7170A218B00A37E17 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA289FB8170A218B00A37E17 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FA289FBD170A218B00A37E17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		FA289FBE170A218B00A37E17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA289FC0170A218B00A37E17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NCSImagesTest/NCSImagesTest-Prefix.pch";
+				INFOPLIST_FILE = "NCSImagesTest/NCSImagesTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FA289FC1170A218B00A37E17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NCSImagesTest/NCSImagesTest-Prefix.pch";
+				INFOPLIST_FILE = "NCSImagesTest/NCSImagesTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA289F97170A218B00A37E17 /* Build configuration list for PBXProject "NCSImagesTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA289FBD170A218B00A37E17 /* Debug */,
+				FA289FBE170A218B00A37E17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA289FBF170A218B00A37E17 /* Build configuration list for PBXNativeTarget "NCSImagesTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA289FC0170A218B00A37E17 /* Debug */,
+				FA289FC1170A218B00A37E17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA289F94170A218B00A37E17 /* Project object */;
+}

@@ -1,0 +1,45 @@
+FormOID ='84A093F8-8994-4E9D-8425-6894118E1DE9'
+StudyInstrumentOID ='124020CC-8483-4E75-A857-A25CDD3F5D73'
+select * from dbo.r_formengine where formoid='84A093F8-8994-4E9D-8425-6894118E1DE9'
+exec [dbo].[XML_getStudyInstrument]  '124020CC-8483-4E75-A857-A25CDD3F5D73'
+
+
+
+
+
+Event GetRegistrationAge adds the RangeValue attribute to the Form node
+
+
+dbo.getAccrualAge  fill in
+
+RangeValue
+GroupID   = 1,
+TypeID
+
+/*  Domain of TypeID's */
+
+EveryOne gets TypeID =1 first.
+TypeID	1
+TypeID	2
+TypeID	3
+
+
+Range0	1
+Range0	2
+Range1	1
+Range1	2
+Range2	1
+Range2	2
+
+Range3	1
+Range3	2
+Range3	3
+
+TypeID	1
+TypeID	2
+TypeID	3
+
+After each assessment this is the order of the TypeID's 
+WHEN 1 THEN 2
+WHEN 2 THEN 3
+WHEN 3 THEN 1

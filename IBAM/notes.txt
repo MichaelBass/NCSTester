@@ -1,0 +1,37 @@
+
+IBAM Tech Notes:
+
+>IBAM can present multiple items on the screen at once, new methods were added to the Engine interface
+
+-(NSArray *) getNextSection;
+-(NSArray *)  processResponses: (NSArray *) responses responsetime:(double) responsetime;
+
+
+>Typically two items are presented that being a "Order" and "Score" item.
+
+	Naming convention
+	if an item id ends in "Order"  then it represents the sequence or order the user placed the images in
+	if an item id ends in "Score"  then it represents the count of adjacent pairs the user got correct.
+
+
+> Data format for responses
+	See below for examples.
+
+	EMIBMPP06T1Order	04GET|01BLA|05DUC|02SIT|03COI|00BAS		
+	EMIBMPP06T2APScore	1
+
+	EMIBMPP06T1Order	05DUC|01BLA|02SIT|00BAS|04GET|03COI
+	EMIBMPP06T2APScore	2
+
+	EMIBMPP06T1Order	05DUC|04GET|01BLA|02SIT|03COI|00BAS
+	EMIBMPP06T2APScore	3
+
+
+>Image naming convention  {xx}Image abbreviation
+	xx stands for the correct order in the story sequence for a given image.
+
+>Sound files are check in https://numssdev1.itcs.northwestern.edu/svn/code/ac_iOS/xcode/NCS/IBAM/sound
+
+
+>The IBAMViewController is checked in and it has a stub for the instantiation of the engine in viewDidLoad. 
+
