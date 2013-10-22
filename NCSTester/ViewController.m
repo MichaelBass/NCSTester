@@ -198,7 +198,11 @@
     [self.view addConstraint:cn];
 
    
-    [self initWithData];
+    NSArray* instruments = @[@"DCCS",@"Flanker"];
+    [self initWithMetaData:instruments userid:@"test02" dob:@"2/2/2001" education:@"none" language:@"English"];
+    
+    
+    //[self initWithData];
     
 }
 
@@ -220,8 +224,10 @@
 - (void) initWithData {
 
     self.user = [[NCSCoreDataManager sharedInstance] getUserByID:@"0F2092CD-1EA1-4321-A145-0CFCFF63A61D"];
-    /*
+    
      [self createTestWithName:@"DCCS"];
+     [self createTestWithName:@"Flanker"];
+    /*
      [self createTestWithName:@"VocabPractice"];
      [self createTestWithName:@"Flanker"];
      [self createTestWithName:@"Vocab"];
