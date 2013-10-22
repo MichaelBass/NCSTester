@@ -20,6 +20,7 @@
 
 @property (nonatomic, strong) NSString *itemID; //
 @property (nonatomic) Boolean finished; //
+@property (nonatomic) BOOL sectional; //
 @property (nonatomic, strong) NSString *trace; //
 
 -(void)setStartItem:(NSString*)firstItemID; //

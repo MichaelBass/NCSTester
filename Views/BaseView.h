@@ -18,6 +18,7 @@
 @interface BaseView : UIView<AVAudioPlayerDelegate>
 
 @property (strong, nonatomic) NCSItem* item;
+@property (strong, nonatomic) NSArray* items;
 @property (weak, nonatomic) id <TestViewDelegate> delegate;
 
 @property (strong, nonatomic) id<Engine> engine;
@@ -28,6 +29,7 @@
 - (IBAction)onStartFormButton:(id)sender;
 - (void) playSound: (NSString*) soundFileName;
 - (void) displayItem: (NCSItem*) item;
+- (void) displayItems: (NSArray*) items;
 @end
 
 @protocol TestViewDelegate
@@ -36,6 +38,7 @@
 - (void) executeTestCompleted;
 - (void) startTest:(BaseView *)view;
 - (void) processResponse:(int) response responsetime:(double) responsetime;
+- (void) processResponses:(NSArray*) responses responsetime:(double) responsetime;
 @end
 
 

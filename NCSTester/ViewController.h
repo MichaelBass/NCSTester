@@ -16,6 +16,8 @@
 
 - (id)initWithData:(NSDictionary *)data;
 
+- (void)initWithDebugData;
+
 - (void)initWithMetaData: (NSArray*)instruments userid:(NSString*)userid dob:(NSString*)sDOB education:(NSString*)sEducation language:(NSString*)sLanguage;
 
 @end

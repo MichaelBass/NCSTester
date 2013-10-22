@@ -39,5 +39,5 @@
 
 @optional
 -(void)setUser:(CDUser *)user;
-
+@property (nonatomic) BOOL sectional;
 @end

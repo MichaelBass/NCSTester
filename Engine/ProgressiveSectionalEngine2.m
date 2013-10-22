@@ -49,6 +49,7 @@
 @implementation ProgressiveSectionalEngine2
 
 
+
 #pragma mark - private primative properties -
 @synthesize position = _position;
 @synthesize section = _section;
@@ -66,6 +67,12 @@
 @synthesize ItemResponseList = _ItemResponseList;
 
 #pragma mark - private getters -
+
+
+- (BOOL) sectional{
+    return TRUE;
+}
+
 
 -(NSMutableArray*)ItemResponseList{
     

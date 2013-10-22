@@ -23,7 +23,9 @@
 @property (strong, nonatomic) CDUser* user;
 @property (strong, nonatomic) CDAssesement* assessment;
 
+@property (strong, nonatomic) NSArray* currentItems;
 @property (strong, nonatomic) NCSItem* currentItem;
+
 @property (strong, nonatomic) UIView *contentView;
 @property (strong, nonatomic) NSMutableArray *tests;
 @property (strong, nonatomic) BaseView *currentView;
@@ -97,6 +99,19 @@
 
 }
 
+- (void) processResponses:(NSArray*) responses responsetime:(double) responsetime{
+    
+    NSArray * myItems  = [self.currentView.engine processResponses: responses responsetime:responsetime ];
+    
+   // myItem.ResponseTime = [NSString stringWithFormat:@"%f", responsetime];
+    //myItem.Response = [NSString stringWithFormat:@"%d", response];
+    
+    //[[NCSCoreDataManager sharedInstance] addItem:item test:self.test];
+    
+    [self performSelector:@selector(setNextItem) withObject:nil afterDelay:0.5];
+    
+}
+
 - (void) processResponse:(int) response responsetime:(double) responsetime{
     
     NCSItem * myItem  = [self.currentView.engine processResponse: response responsetime:responsetime ];
@@ -158,19 +173,44 @@
 
 - (void) setNextItem{
 
-    NSString *sCurrentItem = [self.currentView.engine getNextItem];
-    self.currentItem  = [self.currentView.engine getItem:sCurrentItem];
-
+    if(self.currentView.engine.sectional == TRUE ){
     
-    // If next item is nil we are done with test
-    // Save data and mark test complete.
-    if(self.currentItem == nil)
-    {
-        //self.bPaused = YES;
-        [self executeTestCompleted];
-    }else{
-        [self.currentView displayItem: self.currentItem];
+         self.currentItems = [self.currentView.engine getNextSection];
+        
+        // If next item is nil we are done with test
+        // Save data and mark test complete.
+        if(self.currentItems == nil)
+        {
+            //self.bPaused = YES;
+            [self executeTestCompleted];
+        }else{
+            [self.currentView displayItems: self.currentItems];
+        }
+        
+        
+    } else{
+        
+        NSString *sCurrentItem = [self.currentView.engine getNextItem];
+      
+        self.currentItem  = [self.currentView.engine getItem:sCurrentItem];
+        
+        // If next item is nil we are done with test
+        // Save data and mark test complete.
+        if(self.currentItem == nil)
+        {
+            //self.bPaused = YES;
+            [self executeTestCompleted];
+        }else{
+            [self.currentView displayItem: self.currentItem];
+        }
+   
     }
+    
+  
+    
+   
+
+
 }
 
 
@@ -203,13 +243,15 @@
     cn = [NSLayoutConstraint constraintWithItem:self.contentView attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0.0];
     [self.view addConstraint:cn];
 
-    NSArray* instruments = @[@"DCCS",@"Flanker"];
+    
+    /*
+    NSArray* instruments = @[@"IBAM",@"Flanker"];
     [self initWithMetaData:instruments userid:@"test02" dob:@"2/2/2001" education:@"none" language:@"English"];
+    */
     
-    
-    //[self initWithData];
+    [self initWithDebugData];
   
-    [self initWithMetaData:_data[@"tests"] userid:_data[@"user"] dob:_data[@"dob"] education:_data[@"education"] language:_data[@"language"]];
+    //[self initWithMetaData:_data[@"tests"] userid:_data[@"user"] dob:_data[@"dob"] education:_data[@"education"] language:_data[@"language"]];
 }
 
 - (void) initWithMetaData:(NSArray*)instruments userid:(NSString*)userid dob:(NSString*)sDOB education:(NSString*)sEducation language:(NSString*)sLanguage {
@@ -238,12 +280,12 @@
     return self;
 }
 
-/*
-- (void) initWithData {
+
+- (void) initWithDebugData {
 
     self.user = [[NCSCoreDataManager sharedInstance] getUserByID:@"0F2092CD-1EA1-4321-A145-0CFCFF63A61D"];
 
-     [self createTestWithName:@"DCCS"];
+     [self createTestWithName:@"IBAM"];
      [self createTestWithName:@"Flanker"];
 
      [self createTestWithName:@"VocabPractice"];
@@ -262,7 +304,7 @@
     
     [self loadTestAtIndex:0];
 }
-*/
+
 
 - (void)createTestWithName:(NSString*)name
 {

@@ -276,6 +276,7 @@
 		A0B094EF1816C59800A1A5D8 /* slide.png in Resources */ = {isa = PBXBuildFile; fileRef = A0B094D71816C59800A1A5D8 /* slide.png */; };
 		A0B094F01816C59800A1A5D8 /* swing.png in Resources */ = {isa = PBXBuildFile; fileRef = A0B094D81816C59800A1A5D8 /* swing.png */; };
 		A0B094F11816C59800A1A5D8 /* wagon.png in Resources */ = {isa = PBXBuildFile; fileRef = A0B094D91816C59800A1A5D8 /* wagon.png */; };
+		A0B094F41816CB3B00A1A5D8 /* IBAMView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B094F31816CB3B00A1A5D8 /* IBAMView.m */; };
 		A0DC7E5217FCED8C00E8AF57 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DC7E5117FCED8C00E8AF57 /* BaseViewController.m */; };
 		A0E3C21D17FC8350008A9741 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E3C21C17FC8350008A9741 /* MainViewController.m */; };
 		A0F900001811959D00AA528F /* LAVOC420-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A0F9F4241811957500AA528F /* LAVOC420-3.jpg */; };
@@ -3660,6 +3661,8 @@
 		A0B094D71816C59800A1A5D8 /* slide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slide.png; sourceTree = "<group>"; };
 		A0B094D81816C59800A1A5D8 /* swing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swing.png; sourceTree = "<group>"; };
 		A0B094D91816C59800A1A5D8 /* wagon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wagon.png; sourceTree = "<group>"; };
+		A0B094F21816CB3B00A1A5D8 /* IBAMView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAMView.h; sourceTree = "<group>"; };
+		A0B094F31816CB3B00A1A5D8 /* IBAMView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAMView.m; sourceTree = "<group>"; };
 		A0DC7E5017FCED8C00E8AF57 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		A0DC7E5117FCED8C00E8AF57 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		A0E3C21B17FC8350008A9741 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -7000,6 +7003,8 @@
 				A0F9058718119E3400AA528F /* VocabPractice.m */,
 				A0F905891811A4B500AA528F /* FlankerView.h */,
 				A0F9058A1811A4B500AA528F /* FlankerView.m */,
+				A0B094F21816CB3B00A1A5D8 /* IBAMView.h */,
+				A0B094F31816CB3B00A1A5D8 /* IBAMView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -13783,6 +13788,7 @@
 				A008FFE017FF3FAE0004C5DB /* DichotomousEngine.m in Sources */,
 				A008FFE217FF3FAE0004C5DB /* ProgressiveSectionalEngine2.m in Sources */,
 				A008001417FF44B40004C5DB /* PracticeVocabParser.m in Sources */,
+				A0B094F41816CB3B00A1A5D8 /* IBAMView.m in Sources */,
 				A0209386180EDB0A0024B60D /* DCCSView.m in Sources */,
 				A008001617FF44B40004C5DB /* XMLReader.m in Sources */,
 				A0F90585181195FC00AA528F /* VocabView.m in Sources */,
