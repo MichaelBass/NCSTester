@@ -90,6 +90,7 @@ NSDate* responseTimeStart;
 - (IBAction)onContinueButton:(id)sender
 {
     NSArray* responses = @[self.score.text, self.sequence.text];
+    NSLog(@"Here are the responses %d", responses.count);
     
     //NCSItem* i in responses
     

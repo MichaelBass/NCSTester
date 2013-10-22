@@ -103,6 +103,8 @@
     
     NSArray * myItems  = [self.currentView.engine processResponses: responses responsetime:responsetime ];
     
+    NSLog(@"saving %d items", myItems.count);
+    
    // myItem.ResponseTime = [NSString stringWithFormat:@"%f", responsetime];
     //myItem.Response = [NSString stringWithFormat:@"%d", response];
     
