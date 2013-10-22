@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8ED409321815ABBE0063C923 /* DebugViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED409311815ABBE0063C923 /* DebugViewController.m */; };
+		8ED409351815ACE20063C923 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED409341815ACE20063C923 /* RootViewController.m */; };
 		A003389F18059A580071524C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A003389E18059A580071524C /* CoreData.framework */; };
 		A00338B018059F780071524C /* CDAssesement.m in Sources */ = {isa = PBXBuildFile; fileRef = A00338A518059F780071524C /* CDAssesement.m */; };
 		A00338B118059F780071524C /* CDItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A00338A718059F780071524C /* CDItem.m */; };
@@ -3148,6 +3150,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8ED409301815ABBE0063C923 /* DebugViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugViewController.h; sourceTree = "<group>"; };
+		8ED409311815ABBE0063C923 /* DebugViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugViewController.m; sourceTree = "<group>"; };
+		8ED409331815ACE20063C923 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		8ED409341815ACE20063C923 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		A003389E18059A580071524C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		A00338A418059F780071524C /* CDAssesement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDAssesement.h; sourceTree = "<group>"; };
 		A00338A518059F780071524C /* CDAssesement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDAssesement.m; sourceTree = "<group>"; };
@@ -6535,8 +6541,12 @@
 				A050FEF417FC7206006CD9E0 /* AppDelegate.h */,
 				A050FEF517FC7206006CD9E0 /* AppDelegate.m */,
 				A050FEF717FC7206006CD9E0 /* Main.storyboard */,
+				8ED409331815ACE20063C923 /* RootViewController.h */,
+				8ED409341815ACE20063C923 /* RootViewController.m */,
 				A050FEFA17FC7206006CD9E0 /* ViewController.h */,
 				A050FEFB17FC7206006CD9E0 /* ViewController.m */,
+				8ED409301815ABBE0063C923 /* DebugViewController.h */,
+				8ED409311815ABBE0063C923 /* DebugViewController.m */,
 				A050FEFD17FC7206006CD9E0 /* Images.xcassets */,
 				A050FEEC17FC7206006CD9E0 /* Supporting Files */,
 			);
@@ -12904,6 +12914,7 @@
 				A0F9058818119E3400AA528F /* VocabPractice.m in Sources */,
 				A00338B418059F780071524C /* NCSCoreDataManager.m in Sources */,
 				A0F9058B1811A4B500AA528F /* FlankerView.m in Sources */,
+				8ED409351815ACE20063C923 /* RootViewController.m in Sources */,
 				A008000517FF405A0004C5DB /* Result.m in Sources */,
 				A00338B118059F780071524C /* CDItem.m in Sources */,
 				A008001317FF44B40004C5DB /* IBAMParser.m in Sources */,
@@ -12925,6 +12936,7 @@
 				A0F90585181195FC00AA528F /* VocabView.m in Sources */,
 				A050FEF617FC7206006CD9E0 /* AppDelegate.m in Sources */,
 				A050FEF217FC7206006CD9E0 /* main.m in Sources */,
+				8ED409321815ABBE0063C923 /* DebugViewController.m in Sources */,
 				A008001C17FF66C20004C5DB /* BaseParser.m in Sources */,
 				A008FFE417FF3FAE0004C5DB /* SequenceEngine.m in Sources */,
 				A0E3C21D17FC8350008A9741 /* MainViewController.m in Sources */,
