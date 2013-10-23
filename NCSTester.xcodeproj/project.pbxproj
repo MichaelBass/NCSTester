@@ -16,7 +16,6 @@
 		A00338B318059F780071524C /* CDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = A00338AB18059F780071524C /* CDUser.m */; };
 		A00338B418059F780071524C /* NCSCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A00338AD18059F780071524C /* NCSCoreDataManager.m */; };
 		A00338B518059F780071524C /* NCSTester.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A00338AE18059F780071524C /* NCSTester.xcdatamodeld */; };
-		A00338B81805C34D0071524C /* DCCSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A00338B71805C34D0071524C /* DCCSViewController.m */; };
 		A00338D01805C52B0071524C /* BlueBall.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A00338BB1805C52B0071524C /* BlueBall.jpg */; };
 		A00338D11805C52B0071524C /* BlueTruck.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A00338BC1805C52B0071524C /* BlueTruck.jpg */; };
 		A00338D21805C52B0071524C /* BrownBoat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A00338BD1805C52B0071524C /* BrownBoat.jpg */; };
@@ -187,8 +186,6 @@
 		A0B094F01816C59800A1A5D8 /* swing.png in Resources */ = {isa = PBXBuildFile; fileRef = A0B094D81816C59800A1A5D8 /* swing.png */; };
 		A0B094F11816C59800A1A5D8 /* wagon.png in Resources */ = {isa = PBXBuildFile; fileRef = A0B094D91816C59800A1A5D8 /* wagon.png */; };
 		A0B094F41816CB3B00A1A5D8 /* IBAMView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B094F31816CB3B00A1A5D8 /* IBAMView.m */; };
-		A0DC7E5217FCED8C00E8AF57 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DC7E5117FCED8C00E8AF57 /* BaseViewController.m */; };
-		A0E3C21D17FC8350008A9741 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E3C21C17FC8350008A9741 /* MainViewController.m */; };
 		A0F900001811959D00AA528F /* LAVOC420-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A0F9F4241811957500AA528F /* LAVOC420-3.jpg */; };
 		A0F900011811959D00AA528F /* LAVOC420-9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A0F9F4251811957500AA528F /* LAVOC420-9.jpg */; };
 		A0F900021811959D00AA528F /* LAVOC421-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A0F9F4261811957500AA528F /* LAVOC421-1.jpg */; };
@@ -3278,8 +3275,6 @@
 		A00338AC18059F780071524C /* NCSCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCSCoreDataManager.h; sourceTree = "<group>"; };
 		A00338AD18059F780071524C /* NCSCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCSCoreDataManager.m; sourceTree = "<group>"; };
 		A00338AF18059F780071524C /* NCSTester.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NCSTester.xcdatamodel; sourceTree = "<group>"; };
-		A00338B61805C34D0071524C /* DCCSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCCSViewController.h; sourceTree = "<group>"; };
-		A00338B71805C34D0071524C /* DCCSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCCSViewController.m; sourceTree = "<group>"; };
 		A00338BB1805C52B0071524C /* BlueBall.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BlueBall.jpg; sourceTree = "<group>"; };
 		A00338BC1805C52B0071524C /* BlueTruck.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BlueTruck.jpg; sourceTree = "<group>"; };
 		A00338BD1805C52B0071524C /* BrownBoat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BrownBoat.jpg; sourceTree = "<group>"; };
@@ -3483,10 +3478,6 @@
 		A0B094D91816C59800A1A5D8 /* wagon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wagon.png; sourceTree = "<group>"; };
 		A0B094F21816CB3B00A1A5D8 /* IBAMView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAMView.h; sourceTree = "<group>"; };
 		A0B094F31816CB3B00A1A5D8 /* IBAMView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAMView.m; sourceTree = "<group>"; };
-		A0DC7E5017FCED8C00E8AF57 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
-		A0DC7E5117FCED8C00E8AF57 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
-		A0E3C21B17FC8350008A9741 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		A0E3C21C17FC8350008A9741 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		A0F90583181195FC00AA528F /* VocabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VocabView.h; sourceTree = "<group>"; };
 		A0F90584181195FC00AA528F /* VocabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VocabView.m; sourceTree = "<group>"; };
 		A0F9058618119E3400AA528F /* VocabPractice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VocabPractice.h; sourceTree = "<group>"; };
@@ -6731,7 +6722,6 @@
 				A008FFE517FF405A0004C5DB /* Models */,
 				A008FFD417FF3FAE0004C5DB /* Engine */,
 				A00F643417FDB8C2002E32B2 /* Protocol */,
-				A0E3C21A17FC8350008A9741 /* Controllers */,
 				A050FF1A17FC73E5006CD9E0 /* Views */,
 				A050FEEB17FC7206006CD9E0 /* NCSTester */,
 				A050FF0A17FC7206006CD9E0 /* NCSTesterTests */,
@@ -6977,19 +6967,6 @@
 				A0B094D91816C59800A1A5D8 /* wagon.png */,
 			);
 			path = Park;
-			sourceTree = "<group>";
-		};
-		A0E3C21A17FC8350008A9741 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				A00338B61805C34D0071524C /* DCCSViewController.h */,
-				A00338B71805C34D0071524C /* DCCSViewController.m */,
-				A0E3C21B17FC8350008A9741 /* MainViewController.h */,
-				A0E3C21C17FC8350008A9741 /* MainViewController.m */,
-				A0DC7E5017FCED8C00E8AF57 /* BaseViewController.h */,
-				A0DC7E5117FCED8C00E8AF57 /* BaseViewController.m */,
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 		A0F9058C1811A81700AA528F /* Flanker */ = {
@@ -13411,7 +13388,6 @@
 				A00338B218059F780071524C /* CDTest.m in Sources */,
 				A0AB769A180999550033A57A /* BaseView.m in Sources */,
 				A008000617FF405A0004C5DB /* UUID.m in Sources */,
-				A0DC7E5217FCED8C00E8AF57 /* BaseViewController.m in Sources */,
 				A00338B518059F780071524C /* NCSTester.xcdatamodeld in Sources */,
 				A008000317FF405A0004C5DB /* NCSResource.m in Sources */,
 				A008000017FF405A0004C5DB /* NCSMap.m in Sources */,
@@ -13429,8 +13405,6 @@
 				8ED409321815ABBE0063C923 /* DebugViewController.m in Sources */,
 				A008001C17FF66C20004C5DB /* BaseParser.m in Sources */,
 				A008FFE417FF3FAE0004C5DB /* SequenceEngine.m in Sources */,
-				A0E3C21D17FC8350008A9741 /* MainViewController.m in Sources */,
-				A00338B81805C34D0071524C /* DCCSViewController.m in Sources */,
 				A008000417FF405A0004C5DB /* NCSThreshold.m in Sources */,
 				A008FFFE17FF405A0004C5DB /* NCSElement.m in Sources */,
 				A050FF1D17FC73E5006CD9E0 /* GraphView.m in Sources */,
