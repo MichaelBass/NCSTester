@@ -136,6 +136,10 @@
     //[self.myEngine setUser:self.currentTest.assesement.user];
 
     
+    
+    
+    //view.engine = _user
+    //view.engine.itemList = view.itemList;
 
     [myView.engine setUser:self.user];
      [self mergeSavedDataIntoItemList];
@@ -144,32 +148,6 @@
     NSLog(@"items: %d", myView.itemList.count);
     
     [self setNextItem];
-    
-    /*
-     
-     - (CDAssesement*)addAssesement:(NSArray*)instruments user:(CDUser*)user
-     
-     @implementation CDTest
-     
-     @dynamic completed;
-     @dynamic dateFinished;
-     @dynamic dateStarted;
-     @dynamic lastItemID;
-     @dynamic name;
-     @dynamic orderNumber;
-     @dynamic selectedForUpload;
-     @dynamic testID;
-     @dynamic uploaded;
-     @dynamic userID;
-     @dynamic score;
-     @dynamic error;
-     @dynamic assesement;
-     @dynamic ncsItem;
-     
-     @end
-     */
-    
-    //[[NCSCoreDataManager sharedInstance] updateTestDateStartedStamp:self.test];
 
 }
 
@@ -207,11 +185,6 @@
         }
    
     }
-    
-  
-    
-   
-
 
 }
 
@@ -287,14 +260,13 @@
 
     self.user = [[NCSCoreDataManager sharedInstance] getUserByID:@"0F2092CD-1EA1-4321-A145-0CFCFF63A61D"];
 
-     [self createTestWithName:@"IBAM"];
-     [self createTestWithName:@"Flanker"];
-
-     [self createTestWithName:@"VocabPractice"];
-     [self createTestWithName:@"Flanker"];
-     [self createTestWithName:@"Vocab"];
-     [self createTestWithName:@"MainView"];
-     [self createTestWithName:@"BaseView"];
+    [self createTestWithName:@"IBAM"];
+    [self createTestWithName:@"Flanker"];
+    [self createTestWithName:@"VocabPractice"];
+    [self createTestWithName:@"Flanker"];
+    [self createTestWithName:@"Vocab"];
+    [self createTestWithName:@"MainView"];
+    [self createTestWithName:@"BaseView"];
     
     NSArray* instruments = [NSArray arrayWithObjects:@"BaseView", @"VocabPractice", @"Vocab", nil];
     self.assessment = [[NCSCoreDataManager sharedInstance] addAssesement:instruments user:self.user ];
